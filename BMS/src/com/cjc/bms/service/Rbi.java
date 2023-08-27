@@ -1,9 +1,9 @@
 package com.cjc.bms.service;
 
 public interface Rbi {
-    void createAccount();
-    void displayAllDetails();
-    void depositMoney();
-    void withdrawal();
-    void balanceCheck();
+	public void createAccount();
+	public void displayAllDetails();
+	public void depositMoney();
+	public void withdrawal();
+	public void balanceCheck();
 }
