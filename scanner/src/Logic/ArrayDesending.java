@@ -1,8 +1,8 @@
 package Logic;
 import java.util.Scanner;
-public class ArrayAscending {
-	public static void main(String[] args)
-	{
+public class ArrayDesending {
+	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of Array:");
 		int n= sc.nextInt();
@@ -22,10 +22,9 @@ public class ArrayAscending {
 			System.out.println(" "+a[i]);
 		}
 		
-		
 		for(i=0;i<n;i++) {//i=2
 			for(j=i+1;j<n;j++) {//j=2
-				if(a[i]>a[j]) {//6>1
+				if(a[i]<a[j]) {//6>1
 					temp=a[i];//6
 					a[i]=a[j];//1
 					a[j]=temp;//6
@@ -33,12 +32,10 @@ public class ArrayAscending {
 			}
 		}
 		
-		System.out.println("\nArray Elements in Ascending Order: ");
+		System.out.println("\nArray Elements in Desending Order: ");
 		for(i=0;i<n;i++) {
 			System.out.println(" "+a[i]);
 		}
 
-
-	}
-
+ }
 }
