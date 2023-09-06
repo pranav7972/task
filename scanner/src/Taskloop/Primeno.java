@@ -1,0 +1,17 @@
+package Taskloop;
+import java.util.Scanner;
+public class Primeno {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		
+		if(x > 7);
+		{
+			
+		}
+		
+		
+		
+	}
+
+}
