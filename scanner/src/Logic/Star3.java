@@ -10,9 +10,10 @@ public class Star3 {
 				System.out.print("* ");
 			}
 
-			System.out.println("");
+			System.out.println("")
 		}
 	}
 
 }
 
+;

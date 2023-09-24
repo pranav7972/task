@@ -8,6 +8,7 @@ public class Account {
 	private String gender; 
 	private int age;
 	private double balance;
+	private String accountNumber;
 	public int getAccNo() {
 		return accNo;
 	}
@@ -50,4 +51,12 @@ public class Account {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
+	public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+    
 }
