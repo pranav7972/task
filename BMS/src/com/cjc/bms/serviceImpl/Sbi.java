@@ -30,7 +30,7 @@ public class Sbi implements Rbi {
                 System.out.print("Enter Gender: ");
                 account.setGender(sc.nextLine());
                 System.out.print("Enter Age: ");
-                int age = sc.nextInt();//aa
+                int age = sc.nextInt();//aasrd 
                 sc.nextLine();
                 if (age >= 18) {
                     account.setAge(age);
