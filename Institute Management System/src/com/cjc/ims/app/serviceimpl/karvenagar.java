@@ -31,7 +31,7 @@ public class karvenagar implements Cjc {
             System.out.println("Course ID: " + course.getCid() + ", Course Name: " + course.getCname());
         }
     }
-
+//non
     @Override
     public void addFaculty() {
         Faculty faculty = new Faculty();
