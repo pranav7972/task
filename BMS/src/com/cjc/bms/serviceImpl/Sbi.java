@@ -1,3 +1,5 @@
+package com.cjc.bms.serviceImpl;
+
 import java.util.*;
 import com.cjc.bms.service.Rbi;
 import com.cjc.bms.model.Account;
@@ -44,7 +46,7 @@ public class Sbi implements Rbi {
                 System.out.println("Your Account Balance is : " + account.getBalance());
                 accounts.add(account);
             }
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {//aaa
             System.out.println("Invalid input. Please enter a valid number.");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
