@@ -16,8 +16,13 @@ public class karvenagar implements Cjc {
     @Override
     public void addCourse() {
         Course c1 = new Course();
+        try {
         System.out.print("Enter Course ID: ");
         c1.setCid(sc.nextInt());
+        }
+        catch (InputMismatchException e) {
+			System.out.println("Enter valid ID number. ");
+		}
         System.out.print("Enter Course Name: ");
         c1.setCname(sc.next());
         clist.add(c1);
@@ -28,15 +33,22 @@ public class karvenagar implements Cjc {
     public void viewCourse() {
         System.out.println("List of Courses:");
         for (Course course : clist) {
-            System.out.println("Course ID: " + course.getCid() + ", Course Name: " + course.getCname());
+            System.out.println("Course ID: " + course.getCid());
+            System.out.println("Course Name: " + course.getCname());      
         }
     }
 
     @Override
     public void addFaculty() {
+    	
         Faculty faculty = new Faculty();
+        try {
         System.out.print("Enter Faculty ID: ");
         faculty.setFid(sc.nextInt());
+        }
+        catch (InputMismatchException e) {
+			System.out.println("Enter valid ID number. ");
+		}
         System.out.print("Enter Faculty Name: ");
         faculty.setFname(sc.next());
         flist.add(faculty);
@@ -47,15 +59,23 @@ public class karvenagar implements Cjc {
     public void viewFaculty() {
         System.out.println("List of Faculty Members:");
         for (Faculty faculty : flist) {
-            System.out.println("Faculty ID: " + faculty.getFid() + ", Faculty Name: " + faculty.getFname());
+            System.out.println("Faculty ID: " + faculty.getFid());
+            System.out.println("Faculty Name: " + faculty.getFname());
+            System.out.println("Course ID " + faculty.getCourse().getCid());       
+            System.out.println("Course Name: " + faculty.getCourse().getCname());     
         }
     }
 
     @Override
     public void addBatch() {
         Batch batch = new Batch();
+        try {
         System.out.print("Enter Batch ID: ");
         batch.setBid(sc.nextInt());
+        }
+        catch (InputMismatchException e) {
+			System.out.println("Enter valid Batch ID number. ");
+		}
         System.out.print("Enter Batch Name: ");
         batch.setBname(sc.next());
         blist.add(batch);
@@ -66,15 +86,24 @@ public class karvenagar implements Cjc {
     public void viewBatch() {
         System.out.println("List of Batches:");
         for (Batch batch : blist) {
-            System.out.println("Batch ID: " + batch.getBid() + ", Batch Name: " + batch.getBname());
+            System.out.println("Batch ID: " + batch.getBid());
+            System.out.println("Batch Name: " + batch.getBname());   
+            System.out.println("Faculty ID: " + batch.getFaculty().getFid());
+            System.out.println("Faculty Name: " + batch.getFaculty().getFname());
         }
     }
 
     @Override
     public void addStudent() {
         Student student = new Student();
+        try
+        {
         System.out.print("Enter Student ID: ");
         student.setSid(sc.nextInt());
+        }
+        catch (InputMismatchException e) {
+			System.out.println("Enter valid Student ID number ");
+		}
         System.out.print("Enter Student Name: ");
         student.setSname(sc.next());
         slist.add(student);
@@ -85,7 +114,10 @@ public class karvenagar implements Cjc {
     public void viewStudent() {
         System.out.println("List of Students:");
         for (Student student : slist) {
-            System.out.println("Student ID: " + student.getSid() + ", Student Name: " + student.getSname());
+            System.out.println("Student ID: " + student.getSid());
+            System.out.println("Student Name: " + student.getSname());
+            System.out.println("Batch ID: " + student.getBatch().getBid());
+            System.out.println("Batch Name: " + student.getBatch().getBname());   
         }
     }
 }

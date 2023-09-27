@@ -1,12 +1,14 @@
 package com.cjc.ims.app.client;
 import  com.cjc.ims.app.serviceimpl.*;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         karvenagar karvenagarInstance = new karvenagar();
-
+try {
         while (true) {
             System.out.println("Choose an option:");
             System.out.println("1. Add Course");
@@ -51,7 +53,14 @@ public class Test {
                     System.exit(0);
                 default:
                     System.out.println("Invalid choice. Please select a valid option.");
-            }
+                }
+			
+            
+              }
+        }
+        catch (InputMismatchException e) {
+			System.out.println("Enter vald input from above option");
         }
     }
-}
+  }
+
